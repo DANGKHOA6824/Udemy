@@ -1,0 +1,86 @@
+﻿.card{
+    height: 275px;
+    .card-body{
+        padding: 1rem;
+        .card-title{
+            @include styleText($color-black-0,$fs-0,$fw-1);     
+        }
+        .card-text{
+            @include styleText($color-gray-0,$fs-1 -1,$fw-0);
+            margin: $mg-0 0;
+        }
+        .card__star{
+            i{
+                @include styleText($color-yellow-0,$fs-1,$fw-3);
+            }
+            .card__rate{
+                @include styleText($color-gray-0,$fs-1,$fw-1);
+    
+            }
+            .card__total{
+                @include styleText($color-gray-0,$fs-1,$fw-0);
+    
+            }
+        }
+        .card__price{
+           text-align: right;
+            padding: $pd-2+ 2 0;
+           span{
+            &:first-child{
+                @include styleText($color-gray-0,$fs-1,$fw-0);
+                text-decoration: line-through;
+            }
+            &:last-child{
+                @include styleText($color-black-0,$fs-0,$fw-1);
+
+            }
+           }
+    
+        }
+        .card__price2{
+            text-align: right;
+            transform: translateY(-14px);
+            span{
+                &:first-child{
+                    @include styleText($color-gray-0,$fs-1,$fw-0);
+                    text-decoration: line-through;
+                }
+                &:last-child{
+                    @include styleText($color-black-0,$fs-0,$fw-1);
+    
+                }
+               }
+        
+        }
+
+    }
+    
+}
+.card--feedback{
+    height: 280px;
+    .card-body{
+        padding: 2rem;
+        .card__avt{
+           img{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+           }
+        }
+        .card__top{
+            display: flex;
+            .card__name{
+                margin-bottom: 0;
+            }
+            .card__topright{
+                padding: 8px 30px;
+            }
+        }
+        .card-text{
+            margin-top: 28px;
+            line-height: 22px;
+            font-weight: $fw-0;
+        }
+    }
+
+}

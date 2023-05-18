@@ -1,0 +1,36 @@
+﻿.partners {
+    background-color: $color-gray-4;
+    padding-top: $pd-3;
+    .partners__content {
+        width: 70%;
+        margin: 0 auto;
+        .partners__text {
+            text-align: center;
+        }
+        .partners__img {
+            display: flex;
+            justify-content: space-evenly;
+            .partners__items {
+                margin: 10px 20px;
+            }
+        }
+    }
+    @include reponsive("extra-large") {
+        .partners__content {
+            width: 80%;
+        }
+    }
+    // @include reponsive("large") {
+    //     .partners__content {
+    //         width: 90%;
+    //     }
+    // }
+    @include reponsive("large") {
+        .partners__img{
+            flex-wrap: wrap;
+            .partners__items{
+                text-align: center;
+            }
+        }
+    }
+}

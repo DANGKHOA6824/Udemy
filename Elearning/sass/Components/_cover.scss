@@ -1,0 +1,38 @@
+﻿.cover{
+    height: 500px;
+    // Kế thừa  :extend
+    @extend %backgroundImg;
+    background-image: url(../img/cover.jpg);
+    position: relative;
+    .cover__content{
+        max-width: 500px;
+        position: absolute;
+        top: 50%;
+        left: 12%;
+        transform: translateY(-50%);
+
+        h1{
+            // Kế thừa :mixin 
+            @include styleText($color-white-0,$fs-2,$fw-1);
+        }
+        p{
+            @include styleText($color-white-0,$fs-3,$fw-0);
+        }
+        .input-group-text{
+            border-radius: 0
+
+        }
+        .cover__form{
+            @include styleFormsearch($color-white-0,$color-white-0,$color-white-0);
+        }
+
+
+    }
+    @include reponsive ("small"){
+        .cover__content{
+            max-width: 400px;
+            left: 10%;
+        }
+    }
+
+}
